@@ -47,10 +47,29 @@ export const navList = [
   },
 ];
 
+export const header = {
+  title: {
+    default: "Elias is a ",
+    primary: "web designer & front-end developer",
+  },
+  description:
+    "He crafts responsive websites where technologies meet creativity",
+  button: {
+    text: "Contact me!!",
+    link: "/",
+  },
+  textSubImage: "Currently working on Portfolio",
+};
+
 export const footer = {
   name: developerInfo.name,
   mail: developerInfo.mail,
   footerAbout: "Web designer and front-end developer",
   socialNetwork,
   copyRight: `© Copyright ${info.currentYear}. Made by ${developerInfo.name}`,
+};
+
+export const quote = {
+  quote: "With great power comes great electricity bill",
+  author: "Dr. Who",
 };
