@@ -8,7 +8,14 @@ interface Dots {
   className?: string;
 }
 
-function Dots({ row = 5, col = 5, size = 4, gap = 16, className, ...props }: Dots) {
+function Dots({
+  row = 5,
+  col = 5,
+  size = 4,
+  gap = 16,
+  className,
+  ...props
+}: Dots) {
   const dots = [];
 
   for (let i = 0; i < row; i++) {
@@ -25,7 +32,7 @@ function Dots({ row = 5, col = 5, size = 4, gap = 16, className, ...props }: Dot
 
   return (
     <div
-      className={`grid ${className}`}
+      className={`absolute grid ${className}`}
       style={{ gridTemplateColumns: `repeat(${col}, auto)`, gap: gap }}
       {...props}
     >
