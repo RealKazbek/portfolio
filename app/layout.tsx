@@ -20,13 +20,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${firaCode.variable}`}>
+    <html lang="en" className="min-h-screen">
+      <body className={`${firaCode.variable} flex flex-col min-h-screen`}>
         <Header />
 
-        <main className="mt-16">
-          {children}
-        </main>
+        <main className="mt-16 flex-1 mx-[15%]">{children}</main>
 
         <Footer />
       </body>

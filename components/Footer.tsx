@@ -5,7 +5,7 @@ import Link from "next/link";
 
 function Footer() {
   return (
-    <footer className="flex flex-col gap-12 pt-8 border-t-1 border-[var(--gray)]">
+    <footer className="flex flex-col gap-12 pt-8 pb-4 px-[15%] border-t-1 border-[var(--gray)]">
       <div className="flex justify-between">
         <div className="flex flex-col gap-4">
           <div className="flex gap-6">
@@ -23,7 +23,7 @@ function Footer() {
         <div className="flex flex-col gap-3">
           <p className="text-white">Media</p>
           <div className="flex gap-2 h-8">
-            {footer.threeSocialNetwork.map((item, index) => (
+            {footer.socialNetwork.map((item, index) => (
               <Link href={item.link} key={index}>
                 <item.icon />
               </Link>

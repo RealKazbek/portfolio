@@ -2,11 +2,12 @@
 
 import React, { useState } from "react";
 
-import { navList } from "@/data";
+import { navList, socialNetwork } from "@/data";
 import HeaderLink from "./ui/headerLink";
 import SwitcherLang from "./ui/switcherLang";
 import BurgerMenu from "./ui/burgerMenu";
 import Logo from "./ui/logo";
+import Link from "next/link";
 
 // ! TODO FOOTER, OPEN ANIMATE AND FIX BURGER MENU ANIMATION
 
@@ -16,7 +17,11 @@ function Header() {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <header className="fixed left-0 right-0 top-0 w-[80%] mx-auto pt-8 pb-2 items-center bg-[var(--color-background)] z-50">
+    <header
+      className={`${
+        isOpen ? "h-full" : ""
+      } fixed left-0 right-0 top-0 px-[15%] pt-4 md:pt-8 pb-2 items-center bg-[var(--color-background)] z-50`}
+    >
       <div className="flex justify-between items-center">
         {/* Logo */}
         <Logo responsive />
@@ -41,11 +46,7 @@ function Header() {
       </div>
 
       {isOpen && (
-        <div
-          className={`flex md:hidden flex-col mt-5 transition-opacity duration-300 ${
-            isOpen ? "opacity-100" : "opacity-0"
-          }`}
-        >
+        <div className={`flex md:hidden flex-col mt-5`}>
           <div className="flex flex-col items-start gap-8">
             <nav>
               <ul className="flex flex-col justify-center gap-8">
@@ -62,7 +63,13 @@ function Header() {
             <SwitcherLang />
           </div>
 
-          {/* HERE */}
+          <div className="flex justify-center items-center gap-4 h-16 mt-15">
+            {socialNetwork.map((item, index) => (
+              <Link href={item.link} key={index}>
+                <item.icon size={16} />
+              </Link>
+            ))}
+          </div>
         </div>
       )}
     </header>

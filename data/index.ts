@@ -6,7 +6,8 @@ export const info = {
   currentYear: "2025",
 };
 
-export const threeSocialNetwork = [
+// Советую только три
+export const socialNetwork = [
   {
     icon: GitHub,
     link: "https://github.com/RealKazbek",
@@ -24,7 +25,7 @@ export const threeSocialNetwork = [
 export const developerInfo = {
   name: "Kazbek",
   mail: "37765@iitu.edu.kz",
-  threeSocialNetwork,
+  socialNetwork,
 };
 
 export const navList = [
@@ -50,6 +51,6 @@ export const footer = {
   name: developerInfo.name,
   mail: developerInfo.mail,
   footerAbout: "Web designer and front-end developer",
-  threeSocialNetwork,
+  socialNetwork,
   copyRight: `© Copyright ${info.currentYear}. Made by ${developerInfo.name}`,
 };

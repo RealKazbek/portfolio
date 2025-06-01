@@ -28,7 +28,7 @@ function Logo({ responsive }: { responsive?: boolean }) {
       />
       <h3
         className={`font-bold ${
-          responsive ? "text-3xl" : "text-base"
+          responsive ? "text-2xl" : "text-base"
         } md:text-base`}
       >
         {developerInfo.name}

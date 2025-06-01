@@ -28,7 +28,7 @@ function SwitcherLang({ desktop, ...props }: { desktop?: boolean }) {
       >
         {selectedLang}
         <ChevronDown
-          size={`${desktop ? 18 : 30}`}
+          size={`${desktop ? 18 : 40}`}
           className={`transition-transform duration-300 ${
             open ? "rotate-180 text-white" : ""
           }`}
@@ -43,7 +43,7 @@ function SwitcherLang({ desktop, ...props }: { desktop?: boolean }) {
               onClick={() => handleSelect(lang.code)}
               className={`${
                 desktop ? "" : "text-3xl"
-              } block w-full text-center px-2 py-1 hover:text-white ${
+              } block w-full text-center px-2 py-1 bg-[var(--color-background)] hover:text-white ${
                 selectedLang === lang.code ? "font-semibold text-white" : ""
               }`}
               {...props}

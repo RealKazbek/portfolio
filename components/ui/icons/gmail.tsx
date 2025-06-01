@@ -4,7 +4,7 @@ const Gmail = ({ size = 8, ...props }: { size?: number }) => {
       role="img"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
-      className={`fill-[var(--gray)] hover:fill-white w-${size} h-${size}`}
+      className={`transition-all fill-[var(--gray)] hover:fill-white w-${size} h-${size}`}
       {...props}
     >
       <title>Gmail</title>
