@@ -1,3 +1,4 @@
+import ProjectCard from "@/components/ui/projectCard";
 import SectionTitle from "@/components/ui/sectionTitle";
 
 export default function Home() {
@@ -20,6 +21,13 @@ export default function Home() {
       corrupti? Rem odit sapiente, facilis nihil aut quisquam eaque impedit
       dicta? Consectetur qui cupiditate ipsa molestias cum cumque nemo quasi
       unde eius quos!
+      <ProjectCard
+        img="/images/icons/x.svg"
+        stacks={["html", "css"]}
+        title="html"
+        description="title"
+        buttons={[{ href: "href", text: "text", variant: "default" }, { href: "href", text: "text <~>", variant: "secondary" }]}
+      />
     </div>
   );
 }
