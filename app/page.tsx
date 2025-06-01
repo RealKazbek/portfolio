@@ -1,6 +1,9 @@
+import SectionTitle from "@/components/ui/sectionTitle";
+
 export default function Home() {
   return (
     <div>
+      <SectionTitle title="Lorem" link="/home" />
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni reiciendis
       doloremque quam, aperiam debitis laborum illum delectus vel laudantium
       perspiciatis quia consequatur nihil sequi eveniet inventore neque dolorem
