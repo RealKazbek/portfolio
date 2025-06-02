@@ -1,9 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import Link from "next/link";
 
-import { navigation, developerInfo } from "@/data";
+import { navigation } from "@/data";
 import HeaderLink from "./ui/headerLink";
 import SwitcherLang from "./ui/switcherLang";
 import BurgerMenu from "./ui/burgerMenu";
@@ -15,11 +14,7 @@ function Header() {
   const toggleMenu = () => setIsOpen((prev) => !prev);
 
   return (
-    <header
-      className={`${
-        isOpen ? "h-full" : ""
-      } fixed top-0 left-0 right-0 z-50 mx-4 px-0 lg:px-4 lg:mx-auto lg:w-full max-w-5xl bg-[var(--color-background)] pt-4 lg:pt-6 pb-2`}
-    >
+    <header className="fixed top-0 left-0 right-0 z-50 mx-4 px-0 lg:px-4 lg:mx-auto lg:w-full max-w-5xl bg-[var(--color-background)] pt-4 lg:pt-6 pb-2">
       <div className="flex justify-between items-center">
         {/* Logo */}
         <Logo responsive />
@@ -44,7 +39,7 @@ function Header() {
       </div>
 
       {/* Mobile menu */}
-      {isOpen && (
+      {/* {isOpen && (
         <div className="flex flex-col mt-5 lg:hidden max-w-5xl mx-auto">
           <nav>
             <ul className="flex flex-col gap-8">
@@ -68,7 +63,7 @@ function Header() {
             ))}
           </div>
         </div>
-      )}
+      )} */}
     </header>
   );
 }

@@ -8,25 +8,20 @@ type BurgerMenuProps = {
 function BurgerMenu({ isOpen, toggleMenu }: BurgerMenuProps) {
   return (
     <button
-      onClick={() => toggleMenu()}
-      className={`lg:hidden w-10 h-10 flex flex-col items-center justify-center gap-2 transition-transform duration-500 ${
-        isOpen ? "rotate-180" : ""
-      }`}
+      onClick={toggleMenu}
+      className="lg:hidden w-10 h-10 flex flex-col items-center justify-center relative"
     >
       <span
-        className={`block h-1 rounded bg-[var(--gray)] transition-all duration-500 ${
-          isOpen ? "absolute rotate-45 w-full" : "w-[70%]"
-        }`}
+        className={`block h-1 w-7 rounded bg-[var(--gray)] absolute transition-all duration-300 
+          ${isOpen ? "rotate-45 top-1/2" : "-translate-y-2"}`}
       ></span>
       <span
-        className={`block h-1 w-full rounded bg-[var(--gray)] transition-all duration-500 ${
-          isOpen ? "scale-x-0" : "scale-x-100"
-        }`}
+        className={`block h-1 w-7 rounded bg-[var(--gray)] transition-all duration-300 
+          ${isOpen ? "opacity-0" : "opacity-100"}`}
       ></span>
       <span
-        className={`block h-1 rounded bg-[var(--gray)] transition-all duration-500 ${
-          isOpen ? "absolute -rotate-45 w-full" : "w-[70%]"
-        }`}
+        className={`block h-1 w-7 rounded bg-[var(--gray)] absolute transition-all duration-300 
+          ${isOpen ? "-rotate-45 top-1/2" : "translate-y-2"}`}
       ></span>
     </button>
   );
