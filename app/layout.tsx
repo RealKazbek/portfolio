@@ -8,7 +8,7 @@ import { siteInfo } from "@/data";
 import TitleSpinner from "@/components/ui/decoration/titleSpinner";
 
 const firaCode = Fira_Code({
-  variable: "--font-fira-code",
+  variable: "--font-family",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   display: "swap",
