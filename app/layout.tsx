@@ -29,10 +29,13 @@ export default function RootLayout({
       <body className="flex flex-col min-h-screen w-full">
         <TitleSpinner />
         <MediaDecor />
+
         <Header />
-        <main className="flex-1 mt-16 max-w-5xl px-0 mx-4 lg:px-4 lg:w-full lg:mx-auto">
+
+        <main className="flex flex-col gap-12 mb-12 flex-1 mt-16 max-w-5xl px-0 mx-4 lg:px-4 lg:w-full lg:mx-auto">
           {children}
         </main>
+
         <Footer />
       </body>
     </html>

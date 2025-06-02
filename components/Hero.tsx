@@ -7,7 +7,7 @@ import Dots from "./ui/decoration/dots";
 
 function Hero() {
   return (
-    <section className="flex flex-col items-center sm:flex-row min-h-50 mt-0 mb-15 sm:mt-15 gap-8">
+    <section className="flex flex-col items-center sm:flex-row min-h-50 mt-0 sm:mt-15 gap-8">
       {/* Content */}
       <div className="flex flex-col justify-center items-start w-full min-h-50 sm:w-1/2">
         <h1 className="text-3xl text-white font-semibold leading-[156%]">

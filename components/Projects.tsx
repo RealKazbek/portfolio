@@ -5,8 +5,8 @@ import SectionTitle from "./ui/sectionTitle";
 
 function Projects() {
   return (
-    <div className="flex flex-col gap-4 lg:gap-8 mb-12">
-      <SectionTitle title="projects" link="/projects" />
+    <div className="flex flex-col gap-4 lg:gap-8">
+      <SectionTitle title="projects" link="/projects" maxWidth={500} />
 
       <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 items-start">
         {projects.map((item, index) => (

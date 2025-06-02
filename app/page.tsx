@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
+import Skills from "@/components/Skills";
 import Quote from "@/components/ui/quote";
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
       <Hero />
       <Quote />
       <Projects />
+      <Skills />
     </>
   );
 }

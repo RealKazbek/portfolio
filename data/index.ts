@@ -34,13 +34,13 @@ export const navigation = [
 // ========== Header ==========
 export const headerContent = {
   title: {
-    default: "Elias is a ",
+    default: `${developerInfo.name} is a `,
     highlight: "web designer and front-end developer",
   },
   subtitle: "He crafts responsive websites where technologies meet creativity",
   ctaButton: {
     text: "Contact ME =>",
-    link: "/",
+    link: "/contact",
   },
   status: "Currently working on Portfolio",
 };
@@ -104,6 +104,40 @@ export const projects: Array<ProjectCard> = [
         variant: "default",
       },
     ],
+  },
+];
+
+// ========== Skills ==========
+export const skillsContent = [
+  {
+    stack: "Languages",
+    skills: ["TypeScript", "Lua", "Python", "JavaScript"],
+  },
+  {
+    stack: "Databases",
+    skills: ["SQLite", "PostgreSQL", "MongoDB"],
+  },
+  {
+    stack: "Tools",
+    skills: [
+      "VSCode",
+      "Neovim",
+      "Linux",
+      "Figma",
+      "XFCE",
+      "Arch",
+      "Git",
+      "Font",
+      "Awesome",
+    ],
+  },
+  {
+    stack: "Other",
+    skills: ["HTML", "CSS", "EJS", "SCSS", "REST", "Jinja"],
+  },
+  {
+    stack: "Frameworks",
+    skills: ["React", "Vue", "Disnake", "Discord.js", "Flask", "Express.js"],
   },
 ];
 

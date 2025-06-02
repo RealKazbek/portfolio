@@ -14,7 +14,7 @@ function SectionTitle({ title, maxWidth = 300, link }: SectionTitle) {
         <span className="text-[var(--primary)]">#</span>
         <span className="text-white">{title}</span>
         <span
-          className="h-px bg-[var(--primary)] mx-4 w-full"
+          className="h-px bg-[var(--primary)] mx-4 w-0 sm:w-full"
           style={{ maxWidth }}
         ></span>
       </div>
