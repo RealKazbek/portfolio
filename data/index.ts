@@ -35,11 +35,11 @@ export const navigation = [
 export const headerContent = {
   title: {
     default: "Elias is a ",
-    highlight: "web designer & front-end developer",
+    highlight: "web designer and front-end developer",
   },
   subtitle: "He crafts responsive websites where technologies meet creativity",
   ctaButton: {
-    text: "Contact me!",
+    text: "Contact ME =>",
     link: "/",
   },
   status: "Currently working on Portfolio",
