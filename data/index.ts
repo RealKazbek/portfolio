@@ -2,74 +2,60 @@ import { GitHub } from "@/components/ui/icons/github";
 import { Telegram } from "@/components/ui/icons/telegram";
 import { Instagram } from "@/components/ui/icons/instagram";
 
-export const info = {
-  currentYear: "2025",
-};
-
-// Советую только три
-export const socialNetwork = [
-  {
-    icon: GitHub,
-    link: "https://github.com/RealKazbek",
-  },
-  {
-    icon: Telegram,
-    link: "https://t.me/RealKazbek",
-  },
-  {
-    icon: Instagram,
-    link: "https://www.instagram.com/realkazbek",
-  },
-];
-
+// ========== Developer Info ==========
 export const developerInfo = {
   name: "Kazbek",
-  mail: "37765@iitu.edu.kz",
-  socialNetwork,
+  email: "37765@iitu.edu.kz",
+  role: "Front-end Developer",
+  socialLinks: [
+    { icon: GitHub, url: "https://github.com/RealKazbek" },
+    { icon: Telegram, url: "https://t.me/RealKazbek" },
+    { icon: Instagram, url: "https://www.instagram.com/realkazbek" },
+  ],
 };
 
-export const navList = [
-  {
-    title: "home",
-    path: "/",
-  },
-  {
-    title: "projects",
-    path: "/project",
-  },
-  {
-    title: "about-me",
-    path: "/about",
-  },
-  {
-    title: "contacts",
-    path: "/contact",
-  },
+// ========== Site Info ==========
+export const siteInfo = {
+  title: developerInfo.name,
+  description: `Personal portfolio of ${
+    developerInfo.name
+  } — ${developerInfo.role.toLowerCase()}.`,
+  currentYear: new Date().getFullYear(),
+};
+
+// ========== Navigation ==========
+export const navigation = [
+  { title: "Home", path: "/" },
+  { title: "Projects", path: "/project" },
+  { title: "About Me", path: "/about" },
+  { title: "Contacts", path: "/contact" },
 ];
 
-export const header = {
+// ========== Header ==========
+export const headerContent = {
   title: {
     default: "Elias is a ",
-    primary: "web designer & front-end developer",
+    highlight: "web designer & front-end developer",
   },
-  description:
-    "He crafts responsive websites where technologies meet creativity",
-  button: {
-    text: "Contact me!!",
+  subtitle: "He crafts responsive websites where technologies meet creativity",
+  ctaButton: {
+    text: "Contact me!",
     link: "/",
   },
-  textSubImage: "Currently working on Portfolio",
+  status: "Currently working on Portfolio",
 };
 
-export const footer = {
-  name: developerInfo.name,
-  mail: developerInfo.mail,
-  footerAbout: "Web designer and front-end developer",
-  socialNetwork,
-  copyRight: `© Copyright ${info.currentYear}. Made by ${developerInfo.name}`,
+// ========== Footer ==========
+export const footerContent = {
+  author: developerInfo.name,
+  email: developerInfo.email,
+  description: "Web designer and front-end developer",
+  socialLinks: developerInfo.socialLinks,
+  copyright: `© ${siteInfo.currentYear} — Made by ${developerInfo.name}`,
 };
 
-export const quote = {
-  quote: "With great power comes great electricity bill",
+// ========== Fun Quote ==========
+export const featuredQuote = {
+  text: "With great power comes great electricity bill",
   author: "Dr. Who",
 };

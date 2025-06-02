@@ -9,7 +9,7 @@ function BurgerMenu({ isOpen, toggleMenu }: BurgerMenuProps) {
   return (
     <button
       onClick={() => toggleMenu()}
-      className={`md:hidden w-10 h-10 flex flex-col items-center justify-center gap-2 transition-transform duration-500 ${
+      className={`lg:hidden w-10 h-10 flex flex-col items-center justify-center gap-2 transition-transform duration-500 ${
         isOpen ? "rotate-180" : ""
       }`}
     >

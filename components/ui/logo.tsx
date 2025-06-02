@@ -15,7 +15,7 @@ function Logo({ responsive }: { responsive?: boolean }) {
       href="/"
       className={`flex items-center ${
         responsive ? "gap-3" : "gap-2"
-      } md:gap-2 text-[var(--gray)] ${
+      } lg:gap-2 text-[var(--gray)] ${
         isActive ? "text-white" : "hover:text-white"
       }`}
     >
@@ -24,12 +24,12 @@ function Logo({ responsive }: { responsive?: boolean }) {
         alt="Site logo"
         width={24}
         height={24}
-        className={`${responsive ? "h-6 w-6" : "h-4 w-4"} md:h-4 md:w-4`}
+        className={`${responsive ? "h-6 w-6" : "h-4 w-4"} lg:h-4 lg:w-4`}
       />
       <h3
         className={`font-bold ${
           responsive ? "text-2xl" : "text-base"
-        } md:text-base`}
+        } lg:text-base`}
       >
         {developerInfo.name}
       </h3>

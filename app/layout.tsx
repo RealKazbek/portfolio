@@ -1,34 +1,38 @@
 import type { Metadata } from "next";
 import { Fira_Code } from "next/font/google";
 import "./styles/globals.css";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MediaDecor from "@/components/ui/decoration/mediaDecor";
+import Header from "@/components/Header";
+import { siteInfo } from "@/data";
+import TitleSpinner from "@/components/ui/decoration/titleSpinner";
 
 const firaCode = Fira_Code({
-  variable: "--font-family",
+  variable: "--font-fira-code",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Kazbek | Portfolio",
+  title: "loading...",
+  description: siteInfo.description,
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en" className="min-h-screen">
-      <body className={`${firaCode.variable} flex flex-col min-h-screen`}>
+    <html lang="en" className={firaCode.variable}>
+      <body className="flex flex-col min-h-screen w-full">
+        <TitleSpinner />
         <MediaDecor />
-        
         <Header />
-
-        <main className="mt-16 flex-1 mx-[15%]">{children}</main>
-
+        <main className="flex-1 mt-16 max-w-5xl px-0 mx-4 lg:px-4 lg:w-full lg:mx-auto">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>
