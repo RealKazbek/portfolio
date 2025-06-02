@@ -1,6 +1,7 @@
 import { GitHub } from "@/components/ui/icons/github";
 import { Telegram } from "@/components/ui/icons/telegram";
 import { Instagram } from "@/components/ui/icons/instagram";
+import { Gmail } from "@/components/ui/icons/gmail";
 
 // ========== Developer Info ==========
 export const developerInfo = {
@@ -140,6 +141,30 @@ export const skillsContent = [
     skills: ["React", "Vue", "Disnake", "Discord.js", "Flask", "Express.js"],
   },
 ];
+
+// ========== Contacts ==========
+export const contactContent = {
+  hobby:
+    "I’m interested in freelance opportunities. However, if you have other request or question, don’t hesitate to contact me",
+  contact: [
+    {
+      icon: Gmail,
+      text: "37765@iitu.edu.kz",
+      url: "/",
+    },
+    {
+      icon: Telegram,
+      text: "RealKazbek",
+      url: "/",
+    },
+  ],
+};
+
+// ========== About Me ==========
+export const aboutContent = {
+  message:
+    "Hello, i’m Elias!\nI’m a self-taught front-end developer based in Kyiv, Ukraine. I can develop responsive websites from scratch and raise them into modern user-friendly web experiences.\nTransforming my creativity and knowledge into a websites has been my passion for over a year. I have been helping various clients to establish their presence online. I always strive to learn about the newest technologies and frameworks.",
+};
 
 // ========== Footer ==========
 export const footerContent = {

@@ -8,7 +8,7 @@ import Image from "next/image";
 
 function Skills() {
   return (
-    <div className="flex flex-col justify-center gap-4">
+    <div className="flex flex-col justify-center gap-4 lg:gap-8">
       <SectionTitle title="skills" maxWidth={200} />
 
       <div className="flex w-full">
