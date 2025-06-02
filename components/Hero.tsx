@@ -1,4 +1,4 @@
-import { header } from "@/data";
+import { headerContent } from "@/data";
 import React from "react";
 import { Button } from "./ui/button";
 import Link from "next/link";
@@ -11,14 +11,14 @@ function Hero() {
       {/* Content */}
       <div className="flex flex-col justify-center items-start w-1/2">
         <h1 className="text-3xl text-white font-semibold leading-[156%]">
-          {header.title.default}
-          <span className="text-[var(--primary)]">{header.title.primary}</span>
+          {headerContent.title.default}
+          <span className="text-[var(--primary)]">{headerContent.title.highlight}</span>
         </h1>
 
-        <p className="mt-8 mb-6">{header.description}</p>
+        <p className="mt-8 mb-6">{headerContent.subtitle}</p>
 
-        <Link href={header.button.link} tabIndex={-1}>
-          <Button>{header.button.text}</Button>
+        <Link href={headerContent.ctaButton.link} tabIndex={-1}>
+          <Button>{headerContent.ctaButton.text}</Button>
         </Link>
       </div>
 
@@ -43,7 +43,7 @@ function Hero() {
         </div>
         <div className="border border-t-0 p-2 flex items-center gap-2 z-40 bg-[var(--color-background)]">
           <span className="w-4 h-4 border border-[var(--primary)] bg-[rgba(199,120,221,0.3)]"></span>
-          <p>{header.textSubImage}</p>
+          <p>{headerContent.status}</p>
         </div>
       </div>
     </section>
