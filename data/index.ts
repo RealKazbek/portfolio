@@ -45,6 +45,68 @@ export const headerContent = {
   status: "Currently working on Portfolio",
 };
 
+// ========== Projects ==========
+interface ButtonItem {
+  href: string;
+  text: string;
+  variant: "default" | "secondary" | null | undefined;
+}
+
+interface ProjectCard {
+  img: string;
+  stacks: Array<string>;
+  title: string;
+  description: string;
+  buttons: Array<ButtonItem>;
+}
+
+export const projects: Array<ProjectCard> = [
+  {
+    img: "/images/projects/project1.jpg",
+    stacks: ["HTML", "SCSS", "Python", "Flask"],
+    title: "ChertNodes",
+    description: "Minecraft servers hosting",
+    buttons: [
+      {
+        href: "/",
+        text: "Live <=>",
+        variant: "default",
+      },
+      {
+        href: "/",
+        text: "Cached",
+        variant: "secondary",
+      },
+    ],
+  },
+  {
+    img: "/images/projects/project2.png",
+    stacks: ["React", "Express", "Discord.js", "Node.js", "HTML", "SCSS"],
+    title: "ProtectX",
+    description: "Discord anti-crash bot",
+    buttons: [
+      {
+        href: "/",
+        text: "Live <=>",
+        variant: "default",
+      },
+    ],
+  },
+  {
+    img: "/images/projects/project3.png",
+    stacks: ["CSS", "Express", "Node.js"],
+    title: "Kahoot Answers Viewer",
+    description: "Get answers to your kahoot quiz",
+    buttons: [
+      {
+        href: "/",
+        text: "Live <=>",
+        variant: "default",
+      },
+    ],
+  },
+];
+
 // ========== Footer ==========
 export const footerContent = {
   author: developerInfo.name,

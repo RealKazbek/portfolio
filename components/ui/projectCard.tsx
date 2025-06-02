@@ -9,7 +9,7 @@ interface ButtonItem {
   variant: "default" | "secondary" | null | undefined;
 }
 
-interface ProjectCard {
+interface ProjectCardProps {
   img: string;
   stacks: Array<string>;
   title: string;
@@ -23,21 +23,30 @@ function ProjectCard({
   title,
   description,
   buttons,
-}: ProjectCard) {
+  ...props
+}: ProjectCardProps) {
   return (
-    <div className="border border-[var(--gray)]">
-      <Image src={img} alt={title} width={150} height={150} className="" />
+    <div className="border border-[var(--gray)] overflow-hidden" {...props}>
+      <Image
+        src={img}
+        alt={title}
+        width={600}
+        height={300}
+        className="w-full h-auto object-cover"
+      />
 
-      <span className="border-y-1 border-[var(--gray)] p-2 flex flex-wrap gap-2">
+      <div className="border-y border-[var(--gray)] px-4 py-2 flex flex-wrap gap-2 text-sm text-gray-300">
         {stacks.map((item, index) => (
-          <span key={index}>{item}</span>
+          <span key={index} className="bg-white/10 px-2 py-1">
+            {item}
+          </span>
         ))}
-      </span>
+      </div>
 
-      <div className="flex flex-col gap-4 m-4">
-        <h3 className="font-medium text-white text-2xl">{title}</h3>
-        <p>{description}</p>
-        <div className="flex flex-wrap gap-4">
+      <div className="flex flex-col gap-4 p-4">
+        <h3 className="font-semibold text-white text-xl">{title}</h3>
+        <p className="text-gray-400 text-sm">{description}</p>
+        <div className="flex flex-wrap gap-3">
           {buttons.map((item, index) => (
             <Link key={index} href={item.href}>
               <Button variant={item.variant}>{item.text}</Button>

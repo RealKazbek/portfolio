@@ -3,19 +3,19 @@ import React from "react";
 
 interface SectionTitle {
   title: string;
-  width?: number;
+  maxWidth?: number;
   link?: string;
 }
 
-function SectionTitle({ title, width = 500, link }: SectionTitle) {
+function SectionTitle({ title, maxWidth = 300, link }: SectionTitle) {
   return (
-    <div className="flex items-center justify-between">
-      <div className="flex items-center text-3xl font-medium">
+    <div className="flex items-center justify-between w-full">
+      <div className="flex items-center text-3xl font-medium flex-1">
         <span className="text-[var(--primary)]">#</span>
         <span className="text-white">{title}</span>
         <span
-          className="h-0.5 bg-[var(--primary)] ml-4"
-          style={{ width: width }}
+          className="h-px bg-[var(--primary)] mx-4 w-full"
+          style={{ maxWidth }}
         ></span>
       </div>
 

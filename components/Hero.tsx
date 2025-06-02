@@ -35,7 +35,12 @@ function Hero() {
             className="absolute -z-1 top-7 left-3"
           />
           <Dots className="bottom-20 right-15" size={7} gap={10} />
-          <Image src={"/images/hero.png"} alt="" width={443} height={379} />
+          <Image
+            src={"/images/sections/hero.png"}
+            alt=""
+            width={443}
+            height={379}
+          />
         </div>
 
         <div className="flex items-center gap-2 border border-t-0 border-[var(--gray)] p-2">
