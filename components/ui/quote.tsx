@@ -1,4 +1,4 @@
-import { quote } from "@/data";
+import { featuredQuote } from "@/data";
 import React from "react";
 
 function Quote() {
@@ -9,13 +9,13 @@ function Quote() {
           <span className="absolute text-7xl text-[var(--gray)] left-3 -top-4 select-none h-[20%] bg-[var(--color-background)]">
             {'"'}
           </span>
-          {quote.quote}
+          {featuredQuote.text}
           <span className="absolute text-7xl text-[var(--gray)] right-3 -bottom-1 select-none h-[20%] bg-[var(--color-background)]">
             {'"'}
           </span>
         </blockquote>
         <p className="border border-[var(--gray)] border-t-0 p-2 text-right text-lg">
-          – {quote.author}
+          – {featuredQuote.author}
         </p>
       </div>
     </div>
