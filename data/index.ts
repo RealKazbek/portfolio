@@ -26,10 +26,10 @@ export const siteInfo = {
 
 // ========== Navigation ==========
 export const navigation = [
-  { title: "Home", path: "/" },
-  { title: "Projects", path: "/project" },
-  { title: "About Me", path: "/about" },
-  { title: "Contacts", path: "/contact" },
+  { title: "home", path: "/" },
+  { title: "projects", path: "/project" },
+  { title: "about-me", path: "/about" },
+  { title: "contacts", path: "/contact" },
 ];
 
 // ========== Header ==========
@@ -54,7 +54,7 @@ interface ButtonItem {
 }
 
 interface ProjectCard {
-  img: string;
+  img?: string;
   stacks: Array<string>;
   title: string;
   description: string;
@@ -102,6 +102,135 @@ export const projects: Array<ProjectCard> = [
       {
         href: "/",
         text: "Live <=>",
+        variant: "default",
+      },
+    ],
+  },
+  {
+    img: "/images/projects/project4.png",
+    stacks: ["HTML", "CSS", "JS"],
+    title: "Kotik Bot",
+    description: "Multi-functional discord bot",
+    buttons: [
+      {
+        href: "/",
+        text: "Live <=>",
+        variant: "default",
+      },
+    ],
+  },
+  {
+    img: "/images/projects/project5.png",
+    stacks: ["Vue", "TS", "Less"],
+    title: "Portfolio",
+    description: "You’re using it rn",
+    buttons: [
+      {
+        href: "/",
+        text: "Github <=>",
+        variant: "default",
+      },
+    ],
+  },
+];
+
+// ========== Small Projects ==========
+export const smallProjects: Array<ProjectCard> = [
+  {
+    stacks: ["Discord.js", "TS", "JS"],
+    title: "Bot boilerplate",
+    description:
+      "Start creating scalable discord.js bot with typescript in seconds",
+    buttons: [
+      {
+        href: "/",
+        text: "Github <~>",
+        variant: "default",
+      },
+    ],
+  },
+  {
+    stacks: ["Vue", "CSS", "JS"],
+    title: "My blog",
+    description: "Front-end of my future blog website written in vue",
+    buttons: [
+      {
+        href: "/",
+        text: "Github <~>",
+        variant: "default",
+      },
+    ],
+  },
+  {
+    stacks: ["Figma"],
+    title: "Chess pro",
+    description:
+      "Figma landing page about service for viewing chess tournaments",
+    buttons: [
+      {
+        href: "/",
+        text: "Figma <~>",
+        variant: "default",
+      },
+    ],
+  },
+  {
+    stacks: ["Figma"],
+    title: "Crash protect website",
+    description:
+      "Figma template for website about anti-raid, anti-crash discord bot",
+    buttons: [
+      {
+        href: "/",
+        text: "Figma <~>",
+        variant: "default",
+      },
+    ],
+  },
+  {
+    stacks: ["HTML", "CSS"],
+    title: "CSS expirements",
+    description: "Collection of my different little projects in css",
+    buttons: [
+      {
+        href: "/",
+        text: "Live <~>",
+        variant: "default",
+      },
+    ],
+  },
+  {
+    stacks: ["Lua", "NeoVim"],
+    title: "Web Dev nvim config",
+    description: "Config for neovim perfect for web developer",
+    buttons: [
+      {
+        href: "/",
+        text: "Github <~>",
+        variant: "default",
+      },
+    ],
+  },
+  {
+    stacks: ["Python", "Quart", "HTML"],
+    title: "Ooku",
+    description: "Simple link shortener with auth",
+    buttons: [
+      {
+        href: "/",
+        text: "Live <~>",
+        variant: "default",
+      },
+    ],
+  },
+  {
+    stacks: ["Figma"],
+    title: "School website",
+    description: "Figma template website for my school",
+    buttons: [
+      {
+        href: "/",
+        text: "Figma <~>",
         variant: "default",
       },
     ],

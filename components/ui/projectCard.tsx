@@ -10,11 +10,12 @@ interface ButtonItem {
 }
 
 interface ProjectCardProps {
-  img: string;
+  img?: string;
   stacks: Array<string>;
   title: string;
   description: string;
   buttons: Array<ButtonItem>;
+  className?: string;
 }
 
 function ProjectCard({
@@ -23,19 +24,25 @@ function ProjectCard({
   title,
   description,
   buttons,
+  className,
   ...props
 }: ProjectCardProps) {
   return (
-    <div className="border border-[var(--gray)] overflow-hidden" {...props}>
-      <Image
-        src={img}
-        alt={title}
-        width={600}
-        height={300}
-        className="w-full h-auto object-cover"
-      />
+    <div
+      className={`border border-[var(--gray)] overflow-hidden ${className}`}
+      {...props}
+    >
+      {img && (
+        <Image
+          src={img}
+          alt={title}
+          width={600}
+          height={300}
+          className="w-full h-auto object-cover border-b border-[var(--gray)]"
+        />
+      )}
 
-      <div className="border-y border-[var(--gray)] px-4 py-2 flex flex-wrap gap-2 text-sm text-gray-300">
+      <div className="border-b border-[var(--gray)] px-4 py-2 flex flex-wrap gap-2 text-sm text-gray-300">
         {stacks.map((item, index) => (
           <span key={index} className="bg-white/10 px-2 py-1">
             {item}
