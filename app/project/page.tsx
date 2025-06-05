@@ -5,7 +5,7 @@ import { projects, smallProjects } from "@/data";
 
 export default function Project() {
   return (
-    <div>
+    <>
       <PageTitle title="projects" subTitle="List of my projects" />
 
       <section className="mb-20">
@@ -19,6 +19,6 @@ export default function Project() {
 
         <Projects projects={smallProjects} />
       </section>
-    </div>
+    </>
   );
 }

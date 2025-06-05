@@ -7,7 +7,7 @@ interface PageTitleProps {
 
 function PageTitle({ title, subTitle }: PageTitleProps) {
   return (
-    <div className="flex flex-col justify-center text-white gap-3 my-15">
+    <div className="flex flex-col justify-center text-white gap-3 mt-12 mb-4">
       <div className="font-semibold text-3xl">
         <span className="text-[var(--primary)]">/</span>
         <span>{title}</span>

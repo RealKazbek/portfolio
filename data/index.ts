@@ -8,10 +8,20 @@ export const developerInfo = {
   name: "Kazbek",
   email: "37765@iitu.edu.kz",
   role: "Front-end Developer",
+  kaspi: "44004302xxxxxxxx",
   socialLinks: [
-    { icon: GitHub, url: "https://github.com/RealKazbek" },
-    { icon: Telegram, url: "https://t.me/RealKazbek" },
-    { icon: Instagram, url: "https://www.instagram.com/realkazbek" },
+    { title: "GitHub", icon: GitHub, url: "https://github.com/RealKazbek" },
+    { title: "Telegram", icon: Telegram, url: "https://t.me/RealKazbek" },
+    { title: "Instagram", icon: Instagram, url: "https://www.instagram.com/realkazbek" },
+  ],
+  funFacts: [
+    { text: "I like winter more than summer" },
+    { text: "I often bike with my friends" },
+    { text: "I like pizza and pasta" },
+    { text: "I was in Egypt, Poland and Turkey" },
+    { text: "My favorite movie is The Green Mile" },
+    { text: "I am still in school" },
+    { text: "I don’t have any siblings" },
   ],
 };
 

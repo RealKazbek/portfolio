@@ -13,9 +13,9 @@ export default function Home() {
       <Hero />
       <Quote />
       <Projects projects={projects} withTitle minimal />
-      <Skills />
+      <Skills withTitle withDecor/>
       <AboutMe />
-      <Contacts />
+      <Contacts withTitle/>
     </>
   );
 }
